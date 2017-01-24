@@ -1,0 +1,23 @@
+{
+  "name": "cs499-sun-hackathon1",
+  "version": "1.0.0",
+  "description": "Dropbox-like webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdarkes/cs499-sun-hackathon1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdarkes/cs499-sun-hackathon1/issues"
+  },
+  "homepage": "https://github.com/jdarkes/cs499-sun-hackathon1#readme",
+  "dependencies": {
+    "aws-sdk": "^2.7.27",
+    "express": "^4.14.0"
+  }
+}
