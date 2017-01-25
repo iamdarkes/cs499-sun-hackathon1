@@ -28,14 +28,14 @@ fs.watch('dropbox', (eventType, filename) => {
   if(eventType == 'rename') {
   	if(fs.existsSync('dropbox/' + filename)) {
   		console.log(`File ${filename} uploaded`);
-  		uploadFileToS3(filename);
+  		uploadFileToS3('dropbox/' + filename);
   	} else {
   		console.log(`File ${filename} deleted`);
-	    deleteFileFromS3(filename);
+	    deleteFileFromS3('dropbox/' + filename);
   	}
   } else if (eventType == 'change') {
 	  	console.log(`File ${filename} uploaded`);
-	  	uploadFileToS3(filename);
+	  	uploadFileToS3('dropbox/' + filename);
   } else {
     	console.log('filename not provided');
   }
@@ -68,6 +68,9 @@ function uploadFileToS3(filename) {
 	    });
 	});
 }
+
+
+
 
 //Delete removed item from S3 bucket
 function deleteFileFromS3(filename) {
